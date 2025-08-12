@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Quality | Planos de Saúde Coletivo por Adesão</title>
+  <meta name="description" content="O QualiPRO Hapvida oferece planos de saúde coletivo por adesão com condições especiais para profissionais associados." />
+  <meta name="keywords" content="plano de saúde, Hapvida, QualiPRO, saúde coletiva, plano por adesão" />
+  <meta name="author" content="Qualicorp Clube de Saúde" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="QualiPRO Hapvida | Planos de Saúde Coletivo por Adesão" />
+  <meta property="og:description" content="Planos de saúde com condições especiais para profissionais associados." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=QH" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --blue-primary: #cc1f1f;
+      --blue-dark: #a31a1a;
+      --blue-light: #fde3e3;
+      --blue-hover: #a31818;
+      --whatsapp: #25D366;
+      --gray-text: #333333;
+      --gray-light: #f7f9fc;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    /* Reset & base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif;
+      background: var(--blue-light);
+      color: var(--gray-text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: var(--blue-primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: var(--blue-hover);
+      outline: none;
+    }
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    h1,h2,h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    h3 {
+      font-size: 1.3rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    /* Header */
+    header {
+      background: white;
+      box-shadow: 0 4px 12px var(--shadow);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 9999;
+      font-size: 1rem;
+    }
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo img {
+      height: 100px;
+      width: auto;
+      filter: drop-shadow(0 0 1px #ffffff);
+    }
+    nav ul {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      margin: 0; padding: 0;
+    }
+    nav ul li a {
+      color: var(--blue-primary);
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 5px;
+    }
+    nav ul li a.active,
+    nav ul li a:hover,
+    nav ul li a:focus {
+      background-color: var(--blue-primary);
+      color: white;
+      outline: none;
+    }
+
+    /* Hero Section - split with image left, text right */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 80px; /* header height */
+      background: white;
+      box-shadow: 0 10px 25px var(--shadow);
+      border-radius: 15px;
+      overflow: hidden;
+      min-height: 400px;
+    }
+    .hero .hero-image {
+      flex: 1 1 50%;
+      background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center center;
+      min-height: 400px;
+      clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+      transition: clip-path 0.5s ease;
+      filter: brightness(0.8);
+    }
+    .hero .hero-content {
+      flex: 1 1 50%;
+      padding: 4rem 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--blue-dark);
+    }
+    .hero .hero-content h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    .hero .hero-content p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      color: #2a4365;
+    }
+    .hero .btn-primary {
+      padding: 1rem 2.5rem;
+      background-color: var(--blue-primary);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      align-self: flex-start;
+      box-shadow: 0 8px 15px rgba(0, 119, 204, 0.35);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .hero .btn-primary:hover,
+    .hero .btn-primary:focus {
+      background-color: var(--blue-dark);
+      transform: translateY(-3px);
+      outline: none;
+    }
+    .hero .btn-primary:active {
+      transform: translateY(0);
+    }
+    .hero .hero-image:hover {
+      clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+      filter: brightness(0.9);
+    }
+
+    /* Planos Section */
+    #planos {
+      padding: 4rem 0 6rem;
+    }
+    .planos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .plano-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px var(--shadow);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .plano-card:hover,
+    .plano-card:focus-within {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 119, 204, 0.3);
+      outline: none;
+    }
+    .plano-card.popular {
+      border: 3px solid var(--blue-primary);
+      box-shadow: 0 12px 40px rgba(0, 119, 204, 0.35);
+    }
+    .tag-popular {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background-color: var(--blue-primary);
+      color: white;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 0.3rem 1rem;
+      border-radius: 25px;
+      user-select: none;
+      pointer-events: none;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+    .preco {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--blue-primary);
+      margin: 1.5rem 0;
+    }
+    .preco span {
+      font-weight: 400;
+      color: #555;
+      font-size: 1.1rem;
+      margin-right: 5px;
+    }
+    .plano-card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0 0 2rem;
+    }
+    .plano-card ul li {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+      color: #3a5068;
+    }
+    .plano-card ul li i {
+      color: var(--blue-primary);
+      min-width: 22px;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .btn-secondary {
+      padding: 0.9rem 1.5rem;
+      background-color: var(--blue-dark);
+      color: white;
+      font-weight: 700;
+      border-radius: 10px;
+      cursor: pointer;
+      text-align: center;
+      border: none;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    .btn-secondary:hover,
+    .btn-secondary:focus {
+      background-color: var(--blue-primary);
+      transform: translateY(-2px);
+      outline: none;
+    }
+
+    /* Benefícios Section */
+    #coberturas {
+      padding: 4rem 0 5rem;
+    }
+    .beneficios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+    }
+    .beneficio-item {
+      background: white;
+      padding: 2.5rem 1.8rem;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 8px 25px var(--shadow);
+      color: var(--blue-dark);
+      transition: transform 0.3s ease;
+    }
+    .beneficio-item:hover,
+    .beneficio-item:focus-within {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 50px rgba(0, 119, 204, 0.3);
+      outline: none;
+    }
+    .beneficio-item i {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: var(--blue-primary);
+    }
+    .beneficio-item h3 {
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    .beneficio-item p {
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.3;
+      color: #2c3e50;
+    }
+
+    /* Carências Section */
+    #carencias {
+      padding: 4rem 0 6rem;
+    }
+    .tabela-carencias {
+      overflow-x: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 25px var(--shadow);
+      background: white;
+      padding: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+    thead tr {
+      background-color: var(--blue-primary);
+      color: white;
+    }
+    th, td {
+      padding: 1rem 1.2rem;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    tbody tr:nth-child(even) {
+      background-color: #f0f6fc;
+    }
+    .obs-carencia {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* Contato Section */
+    #contato {
+      padding: 4rem 0 6rem;
+    }
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 2.5rem 3rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px var(--shadow);
+      font-size: 1rem;
+      color: var(--blue-dark);
+    }
+    .form-group {
+      margin-bottom: 1.8rem;
+      position: relative;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.95rem 1rem;
+      border-radius: 10px;
+      border: 1.5px solid #cfd8e3;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      transition: border-color 0.3s ease;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="tel"]:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: var(--blue-primary);
+      box-shadow: 0 0 8px rgba(0, 119, 204, 0.3);
+    }
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    select option[disabled] {
+      color: #999;
+    }
+    button[type="submit"] {
+      background-color: var(--blue-primary);
+      color: white;
+      border: none;
+      padding: 1.1rem 2.5rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 15px;
+      cursor: pointer;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 119, 204, 0.4);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      user-select: none;
+    }
+    button[type="submit"]:hover,
+    button[type="submit"]:focus {
+      background-color: var(--blue-dark);
+      transform: translateY(-2px);
+      outline: none;
+    }
+    button[type="submit"]:active {
+      transform: translateY(0);
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 65px;
+      height: 65px;
+      background-color: var(--whatsapp);
+      color: white;
+      border-radius: 50%;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+      cursor: pointer;
+      z-index: 10000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2.5s infinite;
+    }
+    .whatsapp-float:hover,
+    .whatsapp-float:focus {
+      background-color: #128C7E;
+      transform: scale(1.1);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.9);
+      outline: none;
+    }
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--blue-dark);
+      color: white;
+      padding: 3.5rem 1rem 1.5rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .footer-info,
+    .footer-links,
+    .footer-contato {
+      flex: 1 1 300px;
+    }
+    .footer-info h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .footer-info h3 span {
+      color: #d1d9ea;
+    }
+    .footer-info p {
+      margin: 0;
+      color: #d1d9ea;
+    }
+    .footer-links h4,
+    .footer-contato h4 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .footer-links ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .footer-links ul li {
+      margin-bottom: 0.7rem;
+    }
+    .footer-links ul li a {
+      color: #aac9f9;
+      transition: color 0.3s ease;
+    }
+    .footer-links ul li a:hover,
+    .footer-links ul li a:focus {
+      color: white;
+      outline: none;
+    }
+    .footer-contato p {
+      margin: 0.3rem 0;
+      color: #aac9f9;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      color: #a1b1d6;
+      font-size: 0.8rem;
+      user-select: none;
+    }
+    
+    
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+      .hero .hero-image {
+        clip-path: none;
+        min-height: 220px;
+      }
+      .hero .hero-content {
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+      .hero .hero-content h1 {
+        font-size: 2.25rem;
+      }
+      nav ul {
+        gap: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      .btn-primary {
+        width: 100%;
+        padding: 1rem;
+      }
+      form {
+        padding: 2rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <div class="container" role="navigation" aria-label="Menu principal">
+      <a href="#" class="logo" aria-label="Quality - Página inicial">
+        <img src="qualitycirc.jpg" alt="Logo Quality" />
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--blue-primary);">QUALITY PRÓ SAÚDE</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="#planos" class="active" tabindex="0">Planos</a></li>
+          <li><a href="#coberturas" tabindex="0">Coberturas</a></li>
+          <li><a href="#carencias" tabindex="0">Carências</a></li>
+          <li><a href="#contato" tabindex="0">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Apresentação do Quality3">
+      <div class="hero-image" role="img" aria-label="Profissionais da saúde sorrindo em ambiente hospitalar"></div>
+      <div class="hero-content">
+        <h1>Planos de Saúde Quality</h1>
+        <p>O melhor plano coletivo por adesão para profissionais associados, com atendimento especializado, ampla rede credenciada e benefícios exclusivos.</p>
+        <button onclick="location.href='#contato'" class="btn-primary" aria-label="Faça sua cotação" style="cursor: pointer;">
+  Faça sua cotação
+</button>
+      </div>
+    </section>
+
+    <section id="planos" class="container" tabindex="-1" aria-labelledby="planos-title">
+      <h2 id="planos-title">Nossos Planos</h2>
+      <div class="planos-grid">
+        <article class="plano-card" tabindex="0" aria-labelledby="plano-basico-title">
+          <h3 id="plano-basico-title">Plano Básico</h3>
+          <p class="preco"><span>A partir de </span> <br><span>R$</span> 260,00/mês</p>
+          <ul>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Consultas ilimitadas</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Exames básicos</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Atendimento regional</li>
+          </ul>
+          <button class="btn-secondary" 
+        onclick="window.open('https://wa.me/5561998852416?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Básico%20Quality', '_blank')"
+        aria-label="Quero saber mais do Plano Básico">
+  Saiba mais
+</button>
+        </article>
+        <article class="plano-card popular" tabindex="0" aria-labelledby="plano-intermediario-title">
+          <h3 id="plano-intermediario-title">Plano Intermediário</h3>
+          <p class="preco"><span>A partir de </span> <br><span>R$</span>390,00/mês</p>
+          <div class="tag-popular" aria-label="Plano mais popular">Mais Popular</div>
+          <ul>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Consultas ilimitadas</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Exames avançados</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Atendimento regional + nacional</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Internações hospitalares</li>
+          </ul>
+          <button class="btn-secondary" 
+        onclick="window.open('https://wa.me/5561998852416?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Intermediário%20Quality', '_blank')"
+        aria-label="Quero saber mais do Plano Intermediário">
+  Saiba mais
+</button>
+        </article>
+        <article class="plano-card" tabindex="0" aria-labelledby="plano-premium-title">
+          <h3 id="plano-premium-title">Plano Premium</h3>
+          <p class="preco"><span>A partir de </span> <br><span>R$</span>560,00/mês</p>
+          <ul>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Consultas ilimitadas com especialistas</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Exames de alta complexidade</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Atendimento nacional e internacional</li>
+            <li><i class="fas fa-check-circle" aria-hidden="true"></i> Cirurgias e tratamentos especiais</li>
+          </ul>
+          <button class="btn-secondary" 
+        onclick="window.open('https://wa.me/5561998852416?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20Plano%20Premium%20Quality', '_blank')"
+        aria-label="Quero saber mais do Plano Premium">
+  Saiba mais
+</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="coberturas" class="container" tabindex="-1" aria-labelledby="coberturas-title">
+      <h2 id="coberturas-title">Coberturas e Benefícios</h2>
+      <div class="beneficios-grid">
+        <article class="beneficio-item" tabindex="0" aria-label="Cobertura Ambulatorial">
+          <i class="fas fa-stethoscope" aria-hidden="true"></i>
+          <h3>Cobertura Ambulatorial</h3>
+          <p>Consultas, exames, terapias e tratamentos ambulatoriais.</p>
+        </article>
+        <article class="beneficio-item" tabindex="0" aria-label="Internações Hospitalares">
+          <i class="fas fa-hospital-user" aria-hidden="true"></i>
+          <h3>Internações Hospitalares</h3>
+          <p>Atendimento em hospitais credenciados para internação e cirurgias.</p>
+        </article>
+        <article class="beneficio-item" tabindex="0" aria-label="Rede de Clínicas">
+          <i class="fas fa-clinic-medical" aria-hidden="true"></i>
+          <h3>Rede de Clínicas</h3>
+          <p>Acesso a clínicas especializadas em todo o Brasil.</p>
+        </article>
+        <article class="beneficio-item" tabindex="0" aria-label="Telemedicina 24h">
+          <i class="fas fa-headset" aria-hidden="true"></i>
+          <h3>Telemedicina 24h</h3>
+          <p>Consultas e suporte médico online a qualquer hora.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="carencias" class="container" tabindex="-1" aria-labelledby="carencias-title">
+      <h2 id="carencias-title">Carências</h2>
+      <div class="tabela-carencias" role="table" aria-label="Tabela de carências dos planos">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Tipo de Atendimento</th>
+              <th scope="col">Carência Plano Básico</th>
+              <th scope="col">Carência Plano Intermediário</th>
+              <th scope="col">Carência Plano Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Consultas</td>
+              <td>30 dias</td>
+              <td>15 dias</td>
+              <td>0 dias</td>
+            </tr>
+            <tr>
+              <td>Exames</td>
+              <td>30 dias</td>
+              <td>15 dias</td>
+              <td>0 dias</td>
+            </tr>
+            <tr>
+              <td>Internações</td>
+              <td>180 dias</td>
+              <td>90 dias</td>
+              <td>30 dias</td>
+            </tr>
+            <tr>
+              <td>Cirurgias</td>
+              <td>180 dias</td>
+              <td>90 dias</td>
+              <td>30 dias</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="obs-carencia" aria-live="polite">* As carências são contadas a partir da data de adesão ao plano.</p>
+    </section>
+
+   <section id="contato" class="container" tabindex="-1" aria-labelledby="contato-title">
+  <h2 id="contato-title">Fale Conosco</h2>
+  <form id="formContato" action="https://formsubmit.co/plansaudelider@gmail.com" method="POST">
+    <input type="hidden" name="_next" value="obrigadoquality.html">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_subject" value="Novo contato do site Quality">
+    <input type="hidden" name="_autoresponse" value="Obrigado por entrar em contato! Retornaremos em breve.">
+    
+    <div class="form-group">
+      <label for="nome">Nome Completo</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+    </div>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+    </div>
+    <div class="form-group">
+  <label for="telefone">Telefone</label>
+  <input type="tel" id="telefone" name="telefone" 
+         placeholder="(99) 99999-9999" 
+         pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$"
+         required>
+  <small class="hint">Formato: (99) 99999-9999</small>
+</div>
+    <div class="form-group">
+      <label for="plano">Plano de Interesse</label>
+      <select id="plano" name="plano" required>
+        <option value="" disabled selected>Selecione um plano</option>
+        <option value="basico">Plano Básico</option>
+        <option value="intermediario">Plano Intermediário</option>
+        <option value="premium">Plano Premium</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="mensagem">Mensagem</label>
+      <textarea id="mensagem" name="mensagem" placeholder="Escreva sua mensagem..." required></textarea>
+    </div>
+    <button type="submit">Enviar</button>
+    <div id="form-status"></div>
+  </form>
+</section>
+  </main>
+
+  <a href="https://wa.me/5561998852416?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20planos%20Quality" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-info">
+        <h3><span>Quality</span></h3>
+        <p>Telefone: (61) 99885-2416</p>
+        <p>Email: plansaudelider@gmail.com</p>
+      </div>
+      <nav class="footer-links" aria-label="Links úteis">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#planos">Planos</a></li>
+          <li><a href="#coberturas">Coberturas</a></li>
+          <li><a href="#carencias">Carências</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      
+    </div>
+    <div class="footer-bottom" tabindex="0">
+      &copy; 2025 Thiago Lancelloti. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script>
+document.getElementById('formContato').addEventListener('submit', function(e) {
+  const form = this;
+  const statusDiv = document.getElementById('form-status');
+  let isValid = true;
+
+  // Limpa mensagens anteriores
+  statusDiv.textContent = '';
+  
+  // Validação em tempo real melhorada
+  form.querySelectorAll('[required]').forEach(field => {
+    const errorSpan = field.nextElementSibling?.classList?.contains('error-message') 
+      ? field.nextElementSibling 
+      : document.createElement('span');
+      
+    if (!field.value.trim()) {
+      errorSpan.textContent = 'Campo obrigatório';
+      errorSpan.className = 'error-message';
+      field.after(errorSpan);
+      isValid = false;
+    } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+      errorSpan.textContent = 'Email inválido';
+      errorSpan.className = 'error-message';
+      field.after(errorSpan);
+      isValid = false;
+    } else if (field.type === 'tel' && !/^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$/.test(field.value)) {
+      errorSpan.textContent = 'Formato: (99) 99999-9999';
+      errorSpan.className = 'error-message';
+      field.after(errorSpan);
+      isValid = false;
+    } else if (errorSpan.classList?.contains('error-message')) {
+      errorSpan.remove();
+    }
+  });
+
+  if (!isValid) {
+    e.preventDefault();
+    statusDiv.textContent = 'Por favor, corrija os erros no formulário.';
+    statusDiv.style.color = '#ff6b6b';
+    return;
+  }
+
+  // Feedback visual
+  statusDiv.textContent = 'Enviando sua mensagem...';
+  statusDiv.style.color = 'var(--blue-dark)';
+  
+  // Opcional: Desabilita o botão para evitar múltiplos envios
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+  
+  // Permite o envio normal do formulário
+  return true;
+});
+</script>
+</body>
+</html>

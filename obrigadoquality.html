@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+  <title>Obrigado por entrar em contato | Quality</title>
+  <meta name="description" content="Obrigado por seu interesse nos planos de saúde Quality. Retornaremos seu contato em breve." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Obrigado por entrar em contato | Quality" />
+  <meta property="og:description" content="Obrigado por seu interesse nos planos de saúde Quality. Retornaremos seu contato em breve." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <link rel="icon" href="https://via.placeholder.com/32x32.png?text=QH" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    :root {
+      --blue-primary: #cc1f1f;
+      --blue-dark: #a31a1a;
+      --blue-light: #fde3e3;
+      --blue-hover: #a31818;
+      --whatsapp: #25D366;
+      --gray-text: #333333;
+      --gray-light: #f7f9fc;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--blue-light);
+      color: var(--gray-text);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+    
+    header {
+      background: white;
+      box-shadow: 0 4px 12px var(--shadow);
+      padding: 1rem 0;
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+    
+    .hero {
+      background: linear-gradient(rgba(204, 31, 31, 0.8), rgba(253, 227, 227, 0.2)), 
+                  url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 150px 0 100px;
+      margin-top: 0;
+    }
+    
+    h1 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 1rem 2.5rem;
+      background-color: white;
+      color: var(--blue-primary);
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: var(--blue-dark);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+    
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 65px;
+      height: 65px;
+      background-color: var(--whatsapp);
+      color: white;
+      border-radius: 50%;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.6);
+      cursor: pointer;
+      z-index: 10000;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: pulse 2.5s infinite;
+    }
+    
+    footer {
+      background-color: var(--blue-dark);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .footer-info h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    
+    .footer-info h3 span {
+      color: #d1d9ea;
+    }
+    
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+      }
+    }
+    
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .hero {
+        padding: 100px 0 80px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="quality.html" class="logo" aria-label="Quality - Página inicial">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Logo_Hapvida.svg/256px-Logo_Hapvida.svg.png" alt="Logo Quality" />
+        <span style="font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1.3rem; color: var(--blue-primary);">Quality</span>
+      </a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Mensagem Enviada com Sucesso!</h1>
+      <p>Obrigado por entrar em contato conosco. Nossa equipe retornará em breve.</p>
+      <a href="quality.html" class="btn">Voltar à Página Inicial</a>
+    </div>
+  </section>
+
+  <a href="https://wa.me/5561998852416?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20os%20planos%20Quality" 
+     target="_blank" 
+     rel="noopener" 
+     class="whatsapp-float" 
+     aria-label="Contato WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+  </a>
+
+  <footer>
+    <div class="container">
+      <div class="footer-info">
+        <h3><span>Quality</span></h3>
+        <p>© 2025 Thiago Lancelloti. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
